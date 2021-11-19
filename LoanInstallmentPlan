@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class LoanInstallmentPlan{
+  public static void main (String [] args){
+    Scanner input = new Scanner(System.in);
+    
+    System.out.print("First Name:");
+    String firstname = input.nextLine();
+        
+    System.out.print("Last Name:");
+    String lastname = input.nextLine();
+    
+    System.out.print("Billing Address:");
+    String billingaddress = input.nextLine();
+    
+    System.out.print("Loan Amount:");
+    double loanamount = input.nextDouble();
+    
+    
+    System.out.print("Term of Loan (Months):");
+    int termofloan = input.nextInt();
+    
+    double intrestamount = loanamount * .039;
+    double totalloanamount = loanamount + intrestamount;
+    double monthlypayment = totalloanamount / termofloan;
+    
+
+    System.out.println( "Borrowers:" + firstname + " " + lastname);//next line for print
+    
+    System.out.println("Billing Address: " + billingaddress);
+    
+    System.out.printf("Loan Amount: $%.2f\n",  loanamount);
+    
+    System.out.printf("Intrest: $%.2f\n", intrestamount); //f
+    
+    System.out.printf("Total Loan Amount: $%.2f\n",  totalloanamount);
+    
+    System.out.println("Term of Loan: " + termofloan + " " + "months");
+    
+    System.out.printf("Payment/month: $%.2f", monthlypayment );
+    
+      
+  }
+}
