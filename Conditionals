@@ -1,0 +1,26 @@
+integer = int(input('Please enter an integer:'))
+
+count= 2
+while count <= integer / 2:
+    remainder = integer % count
+    if remainder == 0:
+        print('This is not prime')
+        break
+    count += 1
+else:
+    print('This is a prime')
+
+index = 0
+password = input('Please enter a password:')
+if len(password) < 6:
+    print('Change the password to 6 character long')
+
+
+has_num=False
+for letter in password:
+    if letter.isnumeric():
+        has_num=True
+        print("You're set!")
+        break
+else:
+    print("Password must be contain atleast one numeric value within the password.")
